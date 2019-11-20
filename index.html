@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Firebase-Firestore</title>
+
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Things Which Were Covered</h1>
+    <div style="width: 50%;margin: 0px auto;text-align: center;">
+
+        <ul>
+            <li>How To add Data From Firebase-Firestore</li>
+            <li>How to Get Data From Firebase-Firestore </li>
+            <li>How to Delete Data From Firebase-Firestore</li>
+            <li>How to Update Data From Firebase-Firestore</li>
+            <li>How To Get Realtime Changes From Firebase-Firestore</li>
+            <li>Hot to Apply Queries and Orders data From Firebase-Firestore </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+    <h1>Demo</h1>
+    <div class="content">
+
+        <form id="add-todo-form">
+            <input type="text" name="name" placeholder="Enter Name">
+            <input type="text" name="city" placeholder="Enter City">
+            <button>Add Todo</button>
+
+        </form>
+
+        <ul id="todos-list"></ul>
+
+    </div>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "your firebase api key",
+            authDomain:  "your firebase authDomain",
+            databaseURL: "firebase databse url",
+            projectId: "awesomeproject-3cc43",
+            storageBucket: "awesomeproject-3cc43.appspot.com",
+            messagingSenderId: "your firebase messaging id",
+            appId: "your firebase app id",
+            measurementId: "your firebase measureId"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>
